@@ -2,6 +2,7 @@ import React from "react";
 import { formatCount, timeAgo } from "../utils/helper";
 import { GrDislike, GrLike } from "react-icons/gr";
 import { PiShareFatLight } from "react-icons/pi";
+import CommentsList from "./CommentsList";
 
 const VideoComponent = ({
   videoUrl,
@@ -79,6 +80,7 @@ const VideoComponent = ({
           <p>{description}</p>
         </div>
       </div>
+      <CommentsList />
     </div>
   );
 };

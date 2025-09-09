@@ -10,6 +10,7 @@ import { videoSliceActions } from "../redux/slice/videoSlice";
 import LiveChat from "../components/LiveChat";
 import { appSliceActions } from "../redux/slice/AppSlice";
 import VideoComponent from "../components/VideoComponent";
+import CommentsList from "../components/CommentsList";
 
 const Watch = () => {
   const [searchParams] = useSearchParams();
