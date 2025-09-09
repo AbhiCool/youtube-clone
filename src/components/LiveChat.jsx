@@ -39,7 +39,7 @@ const LiveChat = () => {
   };
   return (
     <div className="live-chat  border border-gray-300 rounded-lg md:w-1/4 w-full h-[600px]">
-      <div className=" w-full h-10 bg-black text-white  px-6 flex items-center">
+      <div className=" w-full h-10  px-6 flex items-center border border-b-1 border-gray-300 shadow-lg">
         Live Chat
       </div>
       <div className="flex flex-col-reverse overflow-y-auto py-2 px-4 h-[84%]">
@@ -57,14 +57,17 @@ const LiveChat = () => {
           </p>
         ))}
       </div>
-      <form onSubmit={handleFormSubmit} className="flex items-center p-2 gap-2">
+      <form
+        onSubmit={handleFormSubmit}
+        className="flex items-center p-2 gap-2 "
+      >
         <input
           className=" w-full px-4 py-2 rounded-xl border border-gray-300"
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <button className="border border-gray-300 rounded-xl py-2 px-4 cursor-pointer">
+        <button className="border border-gray-300 rounded-xl py-1 px-2 cursor-pointer text-sm">
           Send
         </button>
       </form>
