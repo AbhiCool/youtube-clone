@@ -24,3 +24,54 @@ export const formatCount = (count) => {
 
   return formatter.format(count);
 };
+
+export function generateRandomUsername() {
+  const adjectives = [
+    "Fast",
+    "Crazy",
+    "Happy",
+    "Lucky",
+    "Sneaky",
+    "Wild",
+    "Brave",
+    "Smart",
+    "Cool",
+    "Chill",
+  ];
+  const nouns = [
+    "Tiger",
+    "Eagle",
+    "Panda",
+    "Shark",
+    "Wolf",
+    "Fox",
+    "Bear",
+    "Lion",
+    "Hawk",
+    "Dolphin",
+  ];
+
+  const randomAdjective =
+    adjectives[Math.floor(Math.random() * adjectives.length)];
+  const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+  const randomNumber = Math.floor(Math.random() * 1000); // adds uniqueness
+
+  return `${randomAdjective}${randomNoun}${randomNumber}`;
+}
+
+export function getRandomMessage() {
+  const sampleMessages = [
+    "Hey there!",
+    "How’s everyone doing?",
+    "That’s awesome 😎",
+    "Wow, didn’t expect that!",
+    "Can you explain more?",
+    "Good morning 🌞",
+    "Lol that’s funny 😂",
+    "Nice move!",
+    "Totally agree with you.",
+    "Hmm interesting point.",
+  ];
+
+  return sampleMessages[Math.floor(Math.random() * sampleMessages.length)];
+}

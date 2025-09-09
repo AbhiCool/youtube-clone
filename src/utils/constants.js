@@ -10,3 +10,5 @@ export const videoDetailsApi = `https://www.googleapis.com/youtube/v3/videos?par
 export const videoPlayerUrl = `https://www.youtube.com/embed/`; // add video id at the end of it
 
 export const channelDetailsApi = `https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&key=${key}&id=`; // add channel id at the end
+
+export const liveMessageLimit = 250;

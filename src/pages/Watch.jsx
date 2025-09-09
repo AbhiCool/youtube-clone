@@ -53,7 +53,7 @@ const Watch = () => {
 
   return (
     <div className={`${sideMenuExpanded ? "col-span-11" : "col-span-12"}`}>
-      <div className="flex w-full h-[600px] flex-col md:flex-row p-2">
+      <div className="flex w-full h-auto md:h-[600px] flex-col md:flex-row p-2 gap-5">
         <VideoComponent
           videoUrl={videoPlayerUrl + videoId + "?autoplay=1"}
           title={selectedVideo.snippet.title}

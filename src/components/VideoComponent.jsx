@@ -18,7 +18,7 @@ const VideoComponent = ({
   channelThumbnail,
 }) => {
   return (
-    <div className="md:w-3/4 w-full">
+    <div className="md:w-3/4 w-full p-2">
       <iframe
         src={videoUrl}
         className="w-full h-[600px]"
