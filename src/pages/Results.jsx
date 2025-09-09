@@ -22,7 +22,6 @@ const Results = () => {
       dispatch(videoSliceActions.setSearchVideos(res.items));
     };
 
-    if (!search_query) return;
     getSeachResults(search_query);
   }, [search_query]);
   return <VideoSearchList searchedVideos={searchedVideos} />;
