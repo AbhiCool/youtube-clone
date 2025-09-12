@@ -10,7 +10,19 @@ const videoSlice = createSlice({
   },
   reducers: {
     setVideos: (state, action) => {
-      state.videos = action.payload;
+      // console.log("setVideos");
+      const existingIds = new Set(
+        state.videos.map((v) =>
+          typeof v.id === "object" ? v.id.videoId : v.id
+        )
+      );
+
+      const newVideos = action.payload.filter((v) => {
+        const videoId = typeof v.id === "object" ? v.id.videoId : v.id;
+        return !existingIds.has(videoId);
+      });
+
+      state.videos = [...state.videos, ...newVideos];
     },
 
     setSelectedVideo: (state, action) => {

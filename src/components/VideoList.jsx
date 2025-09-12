@@ -8,7 +8,10 @@ const VideoList = () => {
   return (
     <>
       {videos.map((video) => {
-        return <VideoElement key={video.id} video={video} />;
+        const videoId =
+          typeof video.id === "object" ? video.id.videoId : video.id;
+
+        return <VideoElement key={videoId} video={video} />;
       })}
     </>
   );

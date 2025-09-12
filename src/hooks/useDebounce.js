@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
-const useDebounce = (fn, delay) => {
+const useDebounce = (value, delay, callback) => {
   useEffect(() => {
+    if (!value) return;
     const timer = setTimeout(() => {
-      fn();
+      callback(value);
     }, delay);
     return () => clearTimeout(timer);
-  }, [fn, delay]);
+  }, [value, delay]);
 };
 
 export default useDebounce;

@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import { formatCount, timeAgo } from "../utils/helper";
 
 const VideoElement = ({ video }) => {
+  const videoId = typeof video.id === "object" ? video.id.videoId : video.id;
+
   return (
-    <Link to={"/watch?v=" + video.id} key={video.id}>
+    <Link to={"/watch?v=" + videoId}>
       <img
         src={video.snippet.thumbnails.medium.url}
         alt=""
