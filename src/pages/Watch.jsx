@@ -44,6 +44,10 @@ const Watch = () => {
       dispatch(videoSliceActions.setChannelDetails(res.items[0]));
     };
 
+    console.log("scrolling to top");
+    window.scrollTo({
+      top: 0,
+    });
     dispatch(appSliceActions.closeSideMenu());
 
     fetchVideoAndDetails(videoId);
