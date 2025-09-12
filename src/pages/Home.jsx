@@ -56,7 +56,7 @@ const Home = () => {
   }, [pageToken]);
 
   return (
-    <div className={`${sideMenuExpanded ? "col-span-11" : "col-span-12"} `}>
+    <div className={`${sideMenuExpanded ? "col-span-10" : "col-span-12"} `}>
       <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-6 py-2">
         <VideoList />
       </div>

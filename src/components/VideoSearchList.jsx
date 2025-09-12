@@ -7,7 +7,7 @@ const VideoSearchList = ({ searchedVideos }) => {
   return (
     <div
       className={`${
-        sideMenuExpanded ? "col-span-11" : "col-span-12"
+        sideMenuExpanded ? "col-span-10" : "col-span-12"
       } p-4 w-full`}
     >
       {searchedVideos.map((video) => (

@@ -18,10 +18,10 @@ const VideoComponent = ({
   channelThumbnail,
 }) => {
   return (
-    <div className="md:w-3/4 w-full p-2">
+    <div className="md:w-3/4 w-full p-2 ">
       <iframe
         src={videoUrl}
-        className="w-full h-[600px]"
+        className="w-full md:h-[600px] h-[400px] object-cover"
         allowFullScreen
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
